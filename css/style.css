@@ -162,6 +162,100 @@ strong {
 /*---------------------------------------
   PRE LOADER               
 -----------------------------------------*/
+.js-preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.99);
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  opacity: 1;
+  visibility: visible;
+  z-index: 9999;
+  -webkit-transition: opacity 0.25s ease;
+  transition: opacity 0.25s ease;
+}
+
+.js-preloader.loaded {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+@-webkit-keyframes dot {
+  50% {
+      -webkit-transform: translateX(96px);
+      transform: translateX(96px);
+  }
+}
+
+@keyframes dot {
+  50% {
+      -webkit-transform: translateX(96px);
+      transform: translateX(96px);
+  }
+}
+
+@-webkit-keyframes dots {
+  50% {
+      -webkit-transform: translateX(-31px);
+      transform: translateX(-31px);
+  }
+}
+
+@keyframes dots {
+  50% {
+      -webkit-transform: translateX(-31px);
+      transform: translateX(-31px);
+  }
+}
+
+.preloader-inner {
+  position: relative;
+  width: 142px;
+  height: 40px;
+  background: transparent;
+}
+
+.preloader-inner .dot {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 12px;
+  left: 15px;
+  background:var(--background-color );
+  border-radius: 50%;
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  -webkit-animation: dot 2.8s infinite;
+  animation: dot 2.8s infinite;
+}
+
+.preloader-inner .dots {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  margin-top: 12px;
+  margin-left: 31px;
+  -webkit-animation: dots 2.8s infinite;
+  animation: dots 2.8s infinite;
+}
+
+.preloader-inner .dots span {
+  display: block;
+  float: left;
+  width: 16px;
+  height: 16px;
+  margin-left: 16px;
+  background: #0321e4;
+  border-radius: 50%;
+}
+
 
 /*---------------------------------------
   CUSTOM ICON               
@@ -170,9 +264,9 @@ strong {
   background: var(--white-color);
   border-radius: var(--border-radius-large);
   color: var(--dark-color);
-  width: 47px;
-  height: 47px;
-  line-height: 47px;
+  width: 50px;
+  height: 50px;
+  line-height: 40px;
   text-align: center;
 }
 
@@ -424,7 +518,7 @@ strong {
 
 @media  screen and (min-width: 991px) {
   .hero {
-    height: 60vh;
+    height: 100vh;
   }
 }
 
@@ -506,7 +600,7 @@ strong {
   font-weight: var(--font-weight-bold);
   min-width: 140px;
   margin-right: 10px;
-  padding: 13px 30px;
+  padding: 9px 20px;
   display: inline-block;
 }
 
@@ -571,7 +665,7 @@ strong {
 
 
 /*---------------------------------------
-  SERVICES              
+  Persiapan              
 -----------------------------------------*/
 .services,
 .featured {
@@ -913,9 +1007,9 @@ strong {
   display: inline-block;
   vertical-align: top;
   margin: 2px 2px 5px 2px;
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
   text-align: center;
 }
 
@@ -1082,6 +1176,18 @@ strong {
 }
 
 @media screen and (max-width: 575px) {
+  .profile-small-title{
+  border-right: 1px solid var(--border-color);
+  color: var(--background-color);
+  font-weight: var(--font-weight-bold);
+  min-width: 100px;
+  margin-right: 10px;
+  padding: 1px 10px;
+  display: inline-block;
+  }
+  .profile-small-title1{
+    font-size: 13px;
+  }
   .navbar .container {
     margin-right: 12px;
     margin-left: 12px;
@@ -1090,7 +1196,7 @@ strong {
 
 @media screen and (max-width: 480px) {
   h1 {
-    font-size: 40px;
+    font-size: 30px;
   }
 
   h2 {
