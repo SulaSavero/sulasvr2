@@ -1102,6 +1102,15 @@ strong {
 }
 
 @media screen and (max-width: 480px) {
+  .profile-small-title{
+    border-right: 1px solid var(--border-color);
+    color: var(--background-color);
+    font-weight: var(--font-weight-bold);
+    min-width: 100px;
+    margin-right: 20px;
+    padding: 18px 28px;
+    display: inline-block;
+    }
   h1 {
     font-size: 30px;
   }
