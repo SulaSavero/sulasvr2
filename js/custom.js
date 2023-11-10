@@ -4,7 +4,11 @@
   "use strict";
 
     // PRE LOADER
+    $(window).on('load', function() {
 
+      $('#js-preloader').addClass('loaded');
+  
+  });
 
     // CUSTOM LINK
     $('.custom-link').click(function(){
