@@ -9,7 +9,7 @@
       $('#js-preloader').addClass('loaded');
   
   });
-
+  
     // CUSTOM LINK
     $('.custom-link').click(function(){
     var el = $(this).attr('href');
